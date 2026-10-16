@@ -1,0 +1,31 @@
+name: Compile tslim
+on:
+  workflow_dispatch:
+
+jobs:
+  compile:
+    name: Compile
+    runs-on: xcode-27
+    steps:
+      - name: Select Xcode version
+        run: |
+          if [ -d /Applications/Xcode_27.0.app ]; then
+            sudo xcode-select --switch /Applications/Xcode_27.0.app/Contents/Developer
+          else
+            sudo xcode-select --switch /Applications/Xcode_27.app/Contents/Developer
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+
+      - name: Compile
+        run: |
+          xcodebuild \
+            -workspace LoopWorkspace.xcworkspace \
+            -scheme LoopWorkspace \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug \
+            build \
+            CODE_SIGNING_ALLOWED=NO
