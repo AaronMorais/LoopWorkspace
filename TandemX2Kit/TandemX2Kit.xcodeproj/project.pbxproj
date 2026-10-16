@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E10000000000000000000011 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10000000000000000000031 /* LoopKit.framework */; };
+		E10000000000000000000012 /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10000000000000000000032 /* LoopKitUI.framework */; };
+		E10000000000000000000013 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10000000000000000000033 /* CoreBluetooth.framework */; };
+		E10000000000000000000014 /* TandemX2Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10000000000000000000034 /* TandemX2Kit.framework */; };
+		E10000000000000000000015 /* TandemX2Kit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E10000000000000000000034 /* TandemX2Kit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E10000000000000000000016 /* TandemMessages in Frameworks */ = {isa = PBXBuildFile; productRef = E10000000000000000000041 /* TandemMessages */; };
+		E10000000000000000000017 /* TandemAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E10000000000000000000042 /* TandemAuth */; };
+		E10000000000000000000018 /* TandemBLE in Frameworks */ = {isa = PBXBuildFile; productRef = E10000000000000000000043 /* TandemBLE */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E10000000000000000000019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E10000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E10000000000000000000002;
+			remoteInfo = TandemX2Kit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1000000000000000000001A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E10000000000000000000015 /* TandemX2Kit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E10000000000000000000031 /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E10000000000000000000032 /* LoopKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E10000000000000000000033 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		E10000000000000000000034 /* TandemX2Kit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TandemX2Kit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E10000000000000000000035 /* TandemX2KitPlugin.loopplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TandemX2KitPlugin.loopplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E10000000000000000000051 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				TandemX2Kit.h,
+			);
+			publicHeaders = (
+				TandemX2Kit.h,
+			);
+			target = E10000000000000000000002 /* TandemX2Kit */;
+		};
+		E10000000000000000000052 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				TandemX2KitPlugin.h,
+			);
+			publicHeaders = (
+				TandemX2KitPlugin.h,
+			);
+			target = E10000000000000000000003 /* TandemX2KitPlugin */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E10000000000000000000061 /* TandemX2Kit */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E10000000000000000000051 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = TandemX2Kit; sourceTree = "<group>"; };
+		E10000000000000000000062 /* TandemX2KitUI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = TandemX2KitUI; sourceTree = "<group>"; };
+		E10000000000000000000063 /* TandemX2KitPlugin */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E10000000000000000000052 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = TandemX2KitPlugin; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E10000000000000000000071 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E10000000000000000000011 /* LoopKit.framework in Frameworks */,
+				E10000000000000000000012 /* LoopKitUI.framework in Frameworks */,
+				E10000000000000000000013 /* CoreBluetooth.framework in Frameworks */,
+				E10000000000000000000016 /* TandemMessages in Frameworks */,
+				E10000000000000000000017 /* TandemAuth in Frameworks */,
+				E10000000000000000000018 /* TandemBLE in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E10000000000000000000072 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E10000000000000000000014 /* TandemX2Kit.framework in Frameworks */,
+				E10000000000000000000012 /* LoopKitUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E10000000000000000000081 = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000000061 /* TandemX2Kit */,
+				E10000000000000000000062 /* TandemX2KitUI */,
+				E10000000000000000000063 /* TandemX2KitPlugin */,
+				E10000000000000000000082 /* Products */,
+				E10000000000000000000083 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E10000000000000000000082 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000000034 /* TandemX2Kit.framework */,
+				E10000000000000000000035 /* TandemX2KitPlugin.loopplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E10000000000000000000083 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E10000000000000000000031 /* LoopKit.framework */,
+				E10000000000000000000032 /* LoopKitUI.framework */,
+				E10000000000000000000033 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E10000000000000000000091 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E10000000000000000000092 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E10000000000000000000002 /* TandemX2Kit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E100000000000000000000A2 /* Build configuration list for PBXNativeTarget "TandemX2Kit" */;
+			buildPhases = (
+				E10000000000000000000091 /* Headers */,
+				E100000000000000000000B1 /* Sources */,
+				E10000000000000000000071 /* Frameworks */,
+				E100000000000000000000C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E10000000000000000000061 /* TandemX2Kit */,
+				E10000000000000000000062 /* TandemX2KitUI */,
+			);
+			name = TandemX2Kit;
+			packageProductDependencies = (
+				E10000000000000000000041 /* TandemMessages */,
+				E10000000000000000000042 /* TandemAuth */,
+				E10000000000000000000043 /* TandemBLE */,
+			);
+			productName = TandemX2Kit;
+			productReference = E10000000000000000000034 /* TandemX2Kit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E10000000000000000000003 /* TandemX2KitPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E100000000000000000000A3 /* Build configuration list for PBXNativeTarget "TandemX2KitPlugin" */;
+			buildPhases = (
+				E10000000000000000000092 /* Headers */,
+				E100000000000000000000B2 /* Sources */,
+				E10000000000000000000072 /* Frameworks */,
+				E100000000000000000000C2 /* Resources */,
+				E1000000000000000000001A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E100000000000000000000D1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E10000000000000000000063 /* TandemX2KitPlugin */,
+			);
+			name = TandemX2KitPlugin;
+			packageProductDependencies = (
+			);
+			productName = TandemX2KitPlugin;
+			productReference = E10000000000000000000035 /* TandemX2KitPlugin.loopplugin */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					E10000000000000000000002 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					E10000000000000000000003 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = E100000000000000000000A1 /* Build configuration list for PBXProject "TandemX2Kit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E10000000000000000000081;
+			packageReferences = (
+				E10000000000000000000040 /* XCLocalSwiftPackageReference "../TandemKit" */,
+			);
+			productRefGroup = E10000000000000000000082 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E10000000000000000000002 /* TandemX2Kit */,
+				E10000000000000000000003 /* TandemX2KitPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E100000000000000000000C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E100000000000000000000C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E100000000000000000000B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E100000000000000000000B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E100000000000000000000D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E10000000000000000000002 /* TandemX2Kit */;
+			targetProxy = E10000000000000000000019 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E100000000000000000000E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E100000000000000000000E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E100000000000000000000E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.loopkit.TandemX2Kit;
+				PRODUCT_MODULE_NAME = TandemX2Kit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E100000000000000000000E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.loopkit.TandemX2Kit;
+				PRODUCT_MODULE_NAME = TandemX2Kit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E100000000000000000000E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TandemX2KitPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.loopkit.TandemX2KitPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = loopplugin;
+			};
+			name = Debug;
+		};
+		E100000000000000000000E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TandemX2KitPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.loopkit.TandemX2KitPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = loopplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E100000000000000000000A1 /* Build configuration list for PBXProject "TandemX2Kit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E100000000000000000000E1 /* Debug */,
+				E100000000000000000000E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E100000000000000000000A2 /* Build configuration list for PBXNativeTarget "TandemX2Kit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E100000000000000000000E3 /* Debug */,
+				E100000000000000000000E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E100000000000000000000A3 /* Build configuration list for PBXNativeTarget "TandemX2KitPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E100000000000000000000E5 /* Debug */,
+				E100000000000000000000E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		E10000000000000000000040 /* XCLocalSwiftPackageReference "../TandemKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../TandemKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E10000000000000000000041 /* TandemMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E10000000000000000000040 /* XCLocalSwiftPackageReference "../TandemKit" */;
+			productName = TandemMessages;
+		};
+		E10000000000000000000042 /* TandemAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E10000000000000000000040 /* XCLocalSwiftPackageReference "../TandemKit" */;
+			productName = TandemAuth;
+		};
+		E10000000000000000000043 /* TandemBLE */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E10000000000000000000040 /* XCLocalSwiftPackageReference "../TandemKit" */;
+			productName = TandemBLE;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E10000000000000000000001 /* Project object */;
+}

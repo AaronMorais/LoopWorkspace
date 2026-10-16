@@ -121,6 +121,9 @@
       location = "group:MedtrumKit/MedtrumKit.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:TandemX2Kit/TandemX2Kit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:EversenseKit/EversenseKit.xcodeproj">
    </FileRef>
    <FileRef

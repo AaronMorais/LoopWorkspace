@@ -154,6 +154,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E10000000000000000000003"
+               BuildableName = "TandemX2KitPlugin.loopplugin"
+               BlueprintName = "TandemX2KitPlugin"
+               ReferencedContainer = "container:TandemX2Kit/TandemX2Kit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "C1E34B5A29C7AD01009A50A5"
                BuildableName = "MinimedKitPlugin.loopplugin"
                BlueprintName = "MinimedKitPlugin"

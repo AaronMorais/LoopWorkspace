@@ -61,3 +61,6 @@
 [submodule "EversenseKit"]
 	path = EversenseKit
 	url = https://github.com/bastiaanv/EversenseKit
+[submodule "TandemKit"]
+	path = TandemKit
+	url = https://github.com/faBolus-app/TandemKit.git
