@@ -1,12 +1,13 @@
 import Foundation
 import HealthKit
 import LoopKit
+import LoopKitUI
 import os.log
 import TandemBLE
 
 private let tandemLog = Logger(subsystem: "org.loopkit.TandemX2Kit", category: "PumpManager")
 
-public final class TandemX2PumpManager: NSObject, PumpManager {
+public final class TandemX2PumpManager: NSObject, PumpManager, PumpManagerUI {
     public static let pluginIdentifier = "TandemX2"
     public static let localizedTitle = "t:slim X2"
 
@@ -36,11 +37,11 @@ public final class TandemX2PumpManager: NSObject, PumpManager {
     public var lastSync: Date? { state.lastSync }
     public var status: PumpManagerStatus { lockedStatus.value }
 
-    public var debugDescription: String {
+    public override var debugDescription: String {
         "TandemX2PumpManager(name: \(state.pumpName), onboarded: \(isOnboarded), uncertain: \(state.deliveryIsUncertain))"
     }
 
-    let session = TandemX2Session()
+    let session: TandemX2Session = MainActor.assumeIsolated { TandemX2Session() }
     private var delegateQueueStorage = DispatchQueue(label: "org.loopkit.TandemX2Kit.delegate")
     private let lockedStatus: Locked<PumpManagerStatus>
     private var state: State

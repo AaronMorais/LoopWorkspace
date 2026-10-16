@@ -3,7 +3,7 @@ import LoopKitUI
 import SwiftUI
 import UIKit
 
-public extension TandemX2PumpManager: PumpManagerUI {
+extension TandemX2PumpManager {
     public static var onboardingImage: UIImage? { nil }
     public var smallImage: UIImage? { nil }
 

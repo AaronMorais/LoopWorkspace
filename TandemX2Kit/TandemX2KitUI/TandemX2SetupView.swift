@@ -4,9 +4,9 @@ import LoopKitUI
 import SwiftUI
 import UIKit
 
-public final class TandemX2SetupViewController: UIViewController, PumpManagerOnboarding, CompletionNotifying {
-    weak var pumpManagerOnboardingDelegate: PumpManagerOnboardingDelegate?
-    weak var completionDelegate: CompletionDelegate?
+final class TandemX2SetupViewController: UIViewController, PumpManagerOnboarding, CompletionNotifying {
+    var pumpManagerOnboardingDelegate: PumpManagerOnboardingDelegate?
+    var completionDelegate: CompletionDelegate?
 
     private let pumpManager: TandemX2PumpManager
     private var hosting: UIHostingController<TandemX2SetupView>?

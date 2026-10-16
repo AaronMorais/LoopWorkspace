@@ -55,10 +55,10 @@ final class TandemX2Session: NSObject, PumpBLEClientDelegate {
     private var deliveryInProgress = false
     private var cancelRequested = false
     private var currentBolusID = 0
-    private var readyWaiters: [UUID: CheckedContinuation<Void, Error>] = []
+    private var readyWaiters: [UUID: CheckedContinuation<Void, Error>] = [:]
     private var peripherals: [UUID: CBPeripheral] = [:]
 
-    init() {
+    override init() {
         client = PumpBLEClient(restoreIdentifier: "org.loopkit.TandemX2Kit")
         super.init()
         client.delegate = self
