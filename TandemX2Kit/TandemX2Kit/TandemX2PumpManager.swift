@@ -86,18 +86,20 @@ public final class TandemX2PumpManager: NSObject, PumpManager, PumpManagerUI {
     private(set) var paired = false
 
     private func attachSession() {
-        session.onChange = { [weak self] in
-            Task { await self?.captureSessionSnapshot() }
-        }
-        session.onPaired = { [weak self] in
-            Task { @MainActor in
-                guard let self else { return }
-                self.finishPairing(
-                    secret: self.session.derivedSecretData(),
-                    name: self.session.pumpName,
-                    isMobi: self.session.isMobi,
-                    discovered: self.session.discovered
-                )
+        MainActor.assumeIsolated {
+            self.session.onChange = { [weak self] in
+                Task { await self?.captureSessionSnapshot() }
+            }
+            self.session.onPaired = { [weak self] in
+                Task { @MainActor in
+                    guard let self else { return }
+                    self.finishPairing(
+                        secret: self.session.derivedSecretData(),
+                        name: self.session.pumpName,
+                        isMobi: self.session.isMobi,
+                        discovered: self.session.discovered
+                    )
+                }
             }
         }
     }
