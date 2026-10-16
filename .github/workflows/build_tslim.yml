@@ -1,0 +1,54 @@
+name: Build tslim TestFlight
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: xcode-27
+    steps:
+      - name: Select Xcode version
+        run: |
+          if [ -d /Applications/Xcode_27.0.app ]; then
+            sudo xcode-select --switch /Applications/Xcode_27.0.app/Contents/Developer
+          else
+            sudo xcode-select --switch /Applications/Xcode_27.app/Contents/Developer
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Patch Match tables
+        run: |
+          TABLE_PRINTER_PATH=$(ruby -e 'puts Gem::Specification.find_by_name("fastlane").gem_dir')/match/lib/match/table_printer.rb
+          if [ -f "$TABLE_PRINTER_PATH" ]; then
+            sed -i "" "/puts(Terminal::Table.new(params))/d" "$TABLE_PRINTER_PATH"
+          fi
+
+      - name: Sync clock
+        run: sudo sntp -sS time.windows.com || true
+
+      - name: Build
+        run: bundle exec fastlane build_loop
+        env:
+          TEAMID: ${{ secrets.TEAMID }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          FASTLANE_KEY_ID: ${{ secrets.FASTLANE_KEY_ID }}
+          FASTLANE_ISSUER_ID: ${{ secrets.FASTLANE_ISSUER_ID }}
+          FASTLANE_KEY: ${{ secrets.FASTLANE_KEY }}
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+
+      - name: Upload to TestFlight
+        run: bundle exec fastlane release
+        env:
+          TEAMID: ${{ secrets.TEAMID }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          FASTLANE_KEY_ID: ${{ secrets.FASTLANE_KEY_ID }}
+          FASTLANE_ISSUER_ID: ${{ secrets.FASTLANE_ISSUER_ID }}
+          FASTLANE_KEY: ${{ secrets.FASTLANE_KEY }}
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
