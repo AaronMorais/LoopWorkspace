@@ -218,9 +218,9 @@ final class TandemX2Session: NSObject, PumpBLEClientDelegate {
         }
 
         currentBolusID = permission.bolusId
-        let request: InitiateBolusRequest
+        let initiate: InitiateBolusRequest
         do {
-            request = try InitiateBolusRequest(
+            initiate = try InitiateBolusRequest(
                 validating: milliunits,
                 bolusID: permission.bolusId,
                 bolusTypeBitmask: InitiateBolusRequest.bitFood2
@@ -232,7 +232,7 @@ final class TandemX2Session: NSObject, PumpBLEClientDelegate {
         let response: InitiateBolusResponse
         do {
             response = try await self.request(
-                request,
+                initiate,
                 as: InitiateBolusResponse.self,
                 signed: true,
                 allowDelivery: true,
